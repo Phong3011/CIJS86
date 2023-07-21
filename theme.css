@@ -1,0 +1,38 @@
+.card-container{
+  width: 100%;
+  height: 600px;
+  background-color: black;
+  margin-top: 20px;
+}
+
+.card-items{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.items-container{
+  width: 400px;
+  height: 500px;
+}
+
+.items-container:nth-child(2) {
+  padding: 0 10px;
+}
+
+.img-items{
+  width: 100%;
+}
+
+.img-content{
+  width: 100%;
+  height: 200px;
+}
+
+.text-items{
+  background-color: white;
+  height: 350px;
+  padding-left: 15px;
+  font-family: 'Montserrat';
+}

@@ -1,0 +1,50 @@
+.header{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.header-container{
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.date-container{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-bottom: 1px solid black;
+  
+}
+
+.date-container:nth-child(3) {
+  justify-content: space-between;
+}
+
+.date-text{
+  padding: 0px 15px;
+  margin: 0;
+}
+
+.text-sold{
+  background: red;
+  color: white;
+  height: 20px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sold-out{
+  font-size: 12px;
+}
+
+.number{
+  margin-right: 60px;
+  border: 0.1875em ;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  padding: 5px 5px;
+}
