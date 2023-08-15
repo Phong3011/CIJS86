@@ -1,0 +1,17 @@
+.btn-footer{
+  padding-top: 125px
+}
+
+
+.btn-left{
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  margin-right: 5px;
+}
+
+.btn-right{
+  background-color: #FF6600;
+  color: white;
+  padding: 15px 30px;
+}

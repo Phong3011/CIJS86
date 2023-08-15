@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import Layout from "./components/lesson2/Layout";
+import Card from "./components/lesson2/Theme";
 
-function App() {
+import {  Spin } from "antd";
+import { Route, Routes } from "react-router-dom";
+import { Lesson10 } from "./components/lesson10";
+
+
+export const TicketContext = createContext();
+
+const App = () => {
+  const [numberProduct, setNumberProduct] = useState(15);
+  const [loading, setLoading] = useState(false);
+  console.log("loading", loading);
+
+  const renderLoading = () => {
+    if (loading) {
+      return <Spin tip="Loading..."></Spin>;
+    }
+    return (
+      <Routes>
+        <Route path="/" element={<Lesson10 />} />
+        <Route path="/About" element={<Lesson10 />} />
+        <Route path="/Product" element={<Lesson10 />} />
+      </Routes>
+      //  <>
+      //   <Layout/>
+      //   <Card/>
+      //  </>
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TicketContext.Provider
+        value={{ numberProduct, setNumberProduct, setLoading }}
+      >
+        {renderLoading()}
+      </TicketContext.Provider>
     </div>
   );
-}
+};
 
 export default App;
