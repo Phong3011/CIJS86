@@ -1,44 +1,27 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import Layout from "./components/lesson2/Layout";
-import Card from "./components/lesson2/Theme";
-
-import {  Spin } from "antd";
-import { Route, Routes } from "react-router-dom";
-import { Lesson10 } from "./components/lesson10";
-
-
-export const TicketContext = createContext();
+import { Layout, Tabs } from "antd";
+import './App.css';
+import MenuItems from "./components/project/MenuItems";
+import LayoutHeader from "./components/project/LayoutHeader";
+import TableRender from "./components/project/Table";
+import Signin from "./components/project/Signin";
+import Todo from "./components/test/Todo";
 
 const App = () => {
-  const [numberProduct, setNumberProduct] = useState(15);
-  const [loading, setLoading] = useState(false);
-  console.log("loading", loading);
-
-  const renderLoading = () => {
-    if (loading) {
-      return <Spin tip="Loading..."></Spin>;
-    }
-    return (
-      <Routes>
-        <Route path="/" element={<Lesson10 />} />
-        <Route path="/About" element={<Lesson10 />} />
-        <Route path="/Product" element={<Lesson10 />} />
-      </Routes>
-      //  <>
-      //   <Layout/>
-      //   <Card/>
-      //  </>
-    );
-  };
+  // const [title,setTitle] = useState('')
+  // console.log(title);
 
   return (
-    <div>
-      <TicketContext.Provider
-        value={{ numberProduct, setNumberProduct, setLoading }}
-      >
-        {renderLoading()}
-      </TicketContext.Provider>
-    </div>
+    // <Layout style={{minHeight: '100vh'}}>
+      //  <Signin />
+    //   {/* <ContactUs/> */}
+      
+    //   {/* <MenuItems setTitle={setTitle}/>
+    //   <LayoutHeader title={title}/> */}
+    //   <TableRender/>
+    // </Layout>
+    <Todo/>
+    
   );
 };
 
