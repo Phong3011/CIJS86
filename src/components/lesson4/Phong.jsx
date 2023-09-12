@@ -14,7 +14,7 @@ const Admin = () => {
 		<div>
 			<Button onClick={openModal}>Click me</Button>
 			<Modal open={modal} footer={null}>
-				<Content />		
+				<Content />	
 			</Modal>
 		</div>
 	)
